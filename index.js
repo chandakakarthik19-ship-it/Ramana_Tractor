@@ -32,6 +32,10 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/farmer', farmerRoutes);
 app.use('/api/work', workRoutes);
 
+app.get('/', (req, res) => {
+  res.send('🚀 Ramana Tractor API is running!');
+});
+
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, ()=> console.log('Server running on port', PORT));
 
